@@ -1,0 +1,17 @@
+export interface EventImage {
+  id: string;
+  url: string;
+  groupName: string;
+  timestamp: number;
+  isVisible: boolean;
+}
+
+export interface CertificateRecord {
+  id: string;
+  userName: string;
+  userEmail: string;
+  groupName: string;
+  imageUrl: string;
+  feedback?: string;
+  createdAt: number;
+}

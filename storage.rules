@@ -1,0 +1,11 @@
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if request.auth != null;
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if true; // WARNING: This allows anyone to read/write. For production, restrict this.
+    }
+  }
+}

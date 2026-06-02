@@ -1,0 +1,40 @@
+{
+  "entities": {
+    "EventImage": {
+      "title": "Event Image",
+      "description": "An image uploaded by admin for display and certificates",
+      "type": "object",
+      "properties": {
+        "url": { "type": "string", "description": "The URL of the image" },
+        "groupName": { "type": "string", "description": "Unique identifier for the group" },
+        "timestamp": { "type": "number", "description": "Upload timestamp" },
+        "isVisible": { "type": "boolean", "description": "Visibility on the big screen" }
+      },
+      "required": ["url", "groupName", "timestamp", "isVisible"]
+    },
+    "CertificateRecord": {
+      "title": "Certificate Record",
+      "description": "A record of a certificate generated for a user",
+      "type": "object",
+      "properties": {
+        "userName": { "type": "string", "description": "Full name of the user" },
+        "userEmail": { "type": "string", "description": "Email address of the user" },
+        "groupName": { "type": "string", "description": "Selected group name" },
+        "imageUrl": { "type": "string", "description": "The image used in the certificate" },
+        "feedback": { "type": "string", "description": "Optional feedback" },
+        "createdAt": { "type": "number", "description": "Creation timestamp" }
+      },
+      "required": ["userName", "userEmail", "groupName", "imageUrl", "createdAt"]
+    }
+  },
+  "firestore": {
+    "images": {
+      "schema": "EventImage",
+      "description": "Collection of event images"
+    },
+    "certificates": {
+      "schema": "CertificateRecord",
+      "description": "Collection of issued certificates"
+    }
+  }
+}

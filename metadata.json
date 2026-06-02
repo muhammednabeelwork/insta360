@@ -1,0 +1,6 @@
+{
+  "name": "EventLive",
+  "description": "A real-time event display and certificate generation platform with live image rotation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
